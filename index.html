@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cotizador de Seguro de Auto</title>
+    <link rel="stylesheet" href="./stylo.css">
+</head>
+<body>
+    <div class="container">
+
+        <form id="formulario-seguro">
+            <div class="container">
+                <h1>Cotiza tu Seguro de Auto</h1>
+        
+                <form id="formulario-seguro">     
+                    <div class="form-group">
+                        <label for="marca-auto">Marca del Auto:</label>
+                        <input type="text" id="marca-auto" placeholder="Ej. Toyota, Honda" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="modelo-auto">Modelo del Auto:</label>
+                        <input type="text" id="modelo-auto" placeholder="Ej. Corolla, Civic" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="año-auto">Año de Fabricación:</label>
+                        <input type="number" id="año-auto" min="1900" max="2025" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="tipo-seguro">Tipo de Seguro:</label>
+                        <select id="tipo-seguro" required>
+                            <option value="" disabled selected>Selecciona un tipo de seguro</option>
+                            <option value="total">Seguro a Todo Riesgo</option>
+                            <option value="terceros">Seguro Terceros</option>
+                            <option value="responsabilidad">Seguro Responsabilidad Civil</option>
+                        </select>
+                    </div>
+        
+                    <div class="form-group">
+                        <label for="edad-conductor">Edad del Conductor:</label>
+                        <input type="number" id="edad-conductor" min="18" max="100" required>
+                    </div>
+        
+                    <div class="form-group">
+                        <button type="button" id="calcular-btn">Calcular Cotización</button>
+                    </div>
+        
+                    <div id="resultado-cotizacion">
+                        <h2>Tu Cotización: $<span id="monto-cotizacion">0</span></h2>
+                    </div>
+                </form>
+                
+                <div id="historial-cotizaciones">
+                    <h3>Historial de Cotizaciones:</h3> 
+                </div>
+
+                <button id="borrar-historial-btn">Borrar Historial</button>
+
+                <div id="historial-cotizaciones"></div>
+            </div>
+        
+        </form>
+    </div>
+
+    <script src="./main.js" defer></script>
+</body>
+</html>
